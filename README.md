@@ -35,6 +35,6 @@ Soldiers now knew how powerful was the Glow, and some of them thought it would b
 letting it destroyed and scattered.
 </p>
 <p>
-From this time, Yarkis and Harkans had only one aim... Find all Glow fragments and piece it together again.
+From this time, Yarkis and Harkans had only one aim... Find all Glow fragments and piece them together again.
 </p>
 
