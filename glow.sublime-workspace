@@ -36,7 +36,7 @@
 			"file": "editor/glow_editor.py",
 			"settings":
 			{
-				"buffer_size": 41,
+				"buffer_size": 173,
 				"line_ending": "Windows"
 			}
 		},
@@ -224,15 +224,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 41,
+						"buffer_size": 173,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								40,
-								40
+								105,
+								105
 							]
 						],
 						"settings":
