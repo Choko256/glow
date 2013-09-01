@@ -17,14 +17,6 @@
 			}
 		},
 		{
-			"file": "core/__init__.py",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "core/game.py",
 			"settings":
 			{
@@ -36,7 +28,15 @@
 			"file": "core/map/map.py",
 			"settings":
 			{
-				"buffer_size": 98,
+				"buffer_size": 197,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "editor/glow_editor.py",
+			"settings":
+			{
+				"buffer_size": 41,
 				"line_ending": "Windows"
 			}
 		},
@@ -92,6 +92,8 @@
 	},
 	"file_history":
 	[
+		"/D/Dev/glow/editor/__init__.py",
+		"/D/Dev/glow/core/__init__.py",
 		"/C/DEV/glow/core/map/__init__.py",
 		"/C/DEV/glow/core/object/__init__.py",
 		"/C/Documents and Settings/Oxia/Application Data/Sublime Text 3/Packages/User/Preferences.sublime-settings",
@@ -163,33 +165,6 @@
 				},
 				{
 					"buffer": 1,
-					"file": "core/__init__.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "core/game.py",
 					"semi_transient": false,
 					"settings":
@@ -201,8 +176,8 @@
 						"selection":
 						[
 							[
-								250,
-								250
+								185,
+								185
 							]
 						],
 						"settings":
@@ -217,20 +192,47 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "core/map/map.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 98,
+						"buffer_size": 197,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								97,
-								97
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "editor/glow_editor.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 41,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40,
+								40
 							]
 						],
 						"settings":
