@@ -45,6 +45,7 @@ class MenuItem(b.BaseComponent):
 
 	def set_position(self, position):
 		self._i_rect.position = position
+		print("New position of %s: %s" % (self._label, str(position),))
 
 	def width(self):
 		return self._i_rect.global_bounds.width
@@ -97,6 +98,7 @@ class MenuItem(b.BaseComponent):
 			(self.__parent_index * MENU_ITEM_WIDTH) + ((self._i_rect.global_bounds.width - self._itm.global_bounds.width) / 2),
 			((self.__parent_index + offset) * MENU_BAR_HEIGHT) + ((self._i_rect.global_bounds.height - self._itm.global_bounds.height) / 2)
 		)
+		print("Position : %s" % (str(self._itm.position),))
 
 		target.draw(self._itm)
 		if self._opened:

@@ -3,10 +3,58 @@
 	{
 		"selected_items":
 		[
+			[
+				"pos",
+				"position"
+			],
+			[
+				"MENU_",
+				"MENU_BAR_HEIGHT"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "graphics/components/menu.py",
+			"settings":
+			{
+				"buffer_size": 5444,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "graphics/components/base.py",
+			"settings":
+			{
+				"buffer_size": 808,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "glow_editor.py",
+			"settings":
+			{
+				"buffer_size": 214,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "editor/frame.py",
+			"settings":
+			{
+				"buffer_size": 1411,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "graphics/components/statusbar.py",
+			"settings":
+			{
+				"buffer_size": 889,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -35,10 +83,10 @@
 	},
 	"file_history":
 	[
+		"/C/DEV/glow/editor/glow_editor.py",
 		"/C/DEV/glow/glow.py",
 		"/C/DEV/glow/core/game.py",
 		"/C/DEV/glow/core/map/generator.py",
-		"/C/DEV/glow/editor/glow_editor.py",
 		"/C/DEV/glow/graphics/components/combobox.py",
 		"/C/DEV/glow/core/player.py",
 		"/C/DEV/glow/core/object/object.py",
@@ -83,8 +131,146 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "graphics/components/menu.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2704,
+								2704
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 900.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "graphics/components/base.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 808,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								316,
+								316
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "glow_editor.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "editor/frame.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1411,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								965,
+								965
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "graphics/components/statusbar.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 889,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								534,
+								534
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
