@@ -3,11 +3,12 @@
 # Glow map editor
 
 import sfml as sf
+from editor.frame import MainFrame
 
 class GlowEditor:
 	def __init__(self):
-		pass
+		f = MainFrame()
+		f.open()
 
 if __name__ == "__main__":
 	editor = GlowEditor()
-	editor.start()

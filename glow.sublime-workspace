@@ -7,63 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "glow.py",
-			"settings":
-			{
-				"buffer_size": 33,
-				"line_ending": "Windows",
-				"name": "#-*- coding:utf8 -*-"
-			}
-		},
-		{
-			"file": "core/game.py",
-			"settings":
-			{
-				"buffer_size": 250,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "core/map/map.py",
-			"settings":
-			{
-				"buffer_size": 197,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "editor/glow_editor.py",
-			"settings":
-			{
-				"buffer_size": 173,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "core/map/generator.py",
-			"settings":
-			{
-				"buffer_size": 85,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "core/player.py",
-			"settings":
-			{
-				"buffer_size": 560,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "core/object/object.py",
-			"settings":
-			{
-				"buffer_size": 153,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -92,8 +35,16 @@
 	},
 	"file_history":
 	[
-		"/D/Dev/glow/editor/__init__.py",
-		"/D/Dev/glow/core/__init__.py",
+		"/C/DEV/glow/glow.py",
+		"/C/DEV/glow/core/game.py",
+		"/C/DEV/glow/core/map/generator.py",
+		"/C/DEV/glow/editor/glow_editor.py",
+		"/C/DEV/glow/graphics/components/combobox.py",
+		"/C/DEV/glow/core/player.py",
+		"/C/DEV/glow/core/object/object.py",
+		"/C/DEV/glow/core/__init__.py",
+		"/C/DEV/glow/graphics/components/__init__.py",
+		"/C/DEV/glow/graphics/__init__.py",
 		"/C/DEV/glow/core/map/__init__.py",
 		"/C/DEV/glow/core/object/__init__.py",
 		"/C/Documents and Settings/Oxia/Application Data/Sublime Text 3/Packages/User/Preferences.sublime-settings",
@@ -132,200 +83,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "glow.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 33,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								33,
-								33
-							]
-						],
-						"settings":
-						{
-							"auto_name": "#-*- coding:utf8 -*-",
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "core/game.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 250,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								185,
-								185
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "core/map/map.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 197,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								137,
-								137
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "editor/glow_editor.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 173,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								105,
-								105
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "core/map/generator.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 85,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								84,
-								84
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "core/player.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 560,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								559,
-								559
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "core/object/object.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 153,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								152,
-								152
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
