@@ -15,5 +15,8 @@ class Map:
 		self._name = name
 
 	@staticmethod
-	def from_file(self, filename):
-		return Map(os.path.join('./map', os.path.basename(filename)))
+	def from_file(filename):
+		return Map(os.path.basename(filename))
+
+	def __str__(self):
+		return self._name

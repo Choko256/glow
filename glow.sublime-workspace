@@ -3,63 +3,32 @@
 	{
 		"selected_items":
 		[
-			[
-				"_ob",
-				"_objects"
-			],
-			[
-				"compo",
-				"component"
-			],
-			[
-				"pos",
-				"position"
-			],
-			[
-				"MENU_",
-				"MENU_BAR_HEIGHT"
-			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "graphics/components/menu.py",
+			"file": "glow.py",
 			"settings":
 			{
-				"buffer_size": 5554,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "graphics/components/base.py",
-			"settings":
-			{
-				"buffer_size": 881,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "glow_editor.py",
-			"settings":
-			{
-				"buffer_size": 214,
-				"line_ending": "Windows"
+				"buffer_size": 33,
+				"line_ending": "Windows",
+				"name": "#-*- coding:utf8 -*-"
 			}
 		},
 		{
 			"file": "editor/frame.py",
 			"settings":
 			{
-				"buffer_size": 2265,
+				"buffer_size": 2392,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "editor/maplist.py",
+			"file": "graphics/components/menu.py",
 			"settings":
 			{
-				"buffer_size": 496,
+				"buffer_size": 5121,
 				"line_ending": "Windows"
 			}
 		},
@@ -67,39 +36,7 @@
 			"file": "graphics/components/listbox.py",
 			"settings":
 			{
-				"buffer_size": 2534,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "core/map/map.py",
-			"settings":
-			{
-				"buffer_size": 325,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "core/map/manager.py",
-			"settings":
-			{
-				"buffer_size": 195,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "settings.py",
-			"settings":
-			{
-				"buffer_size": 200,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "editor/about.py",
-			"settings":
-			{
-				"buffer_size": 1112,
+				"buffer_size": 3174,
 				"line_ending": "Windows"
 			}
 		},
@@ -112,10 +49,58 @@
 			}
 		},
 		{
-			"file": "graphics/components/statusbar.py",
+			"file": "editor/maplist.py",
 			"settings":
 			{
-				"buffer_size": 889,
+				"buffer_size": 1005,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "core/map/manager.py",
+			"settings":
+			{
+				"buffer_size": 206,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "core/game.py",
+			"settings":
+			{
+				"buffer_size": 250,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "core/map/map.py",
+			"settings":
+			{
+				"buffer_size": 337,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "core/map/generator.py",
+			"settings":
+			{
+				"buffer_size": 85,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "core/player.py",
+			"settings":
+			{
+				"buffer_size": 560,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "core/object/object.py",
+			"settings":
+			{
+				"buffer_size": 153,
 				"line_ending": "Windows"
 			}
 		}
@@ -147,16 +132,9 @@
 	},
 	"file_history":
 	[
-		"/C/DEV/glow/editor/glow_editor.py",
-		"/C/DEV/glow/glow.py",
-		"/C/DEV/glow/core/game.py",
-		"/C/DEV/glow/core/map/generator.py",
-		"/C/DEV/glow/graphics/components/combobox.py",
-		"/C/DEV/glow/core/player.py",
-		"/C/DEV/glow/core/object/object.py",
-		"/C/DEV/glow/core/__init__.py",
-		"/C/DEV/glow/graphics/components/__init__.py",
-		"/C/DEV/glow/graphics/__init__.py",
+		"/D/Dev/glow/editor/glow_editor.py",
+		"/D/Dev/glow/editor/__init__.py",
+		"/D/Dev/glow/core/__init__.py",
 		"/C/DEV/glow/core/map/__init__.py",
 		"/C/DEV/glow/core/object/__init__.py",
 		"/C/Documents and Settings/Oxia/Application Data/Sublime Text 3/Packages/User/Preferences.sublime-settings",
@@ -200,53 +178,25 @@
 			[
 				{
 					"buffer": 0,
-					"file": "graphics/components/menu.py",
+					"file": "glow.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5554,
+						"buffer_size": 33,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3348,
-								3348
+								33,
+								33
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 821.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "graphics/components/base.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 881,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								339,
-								339
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"auto_name": "#-*- coding:utf8 -*-",
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -255,25 +205,54 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "glow_editor.py",
+					"buffer": 1,
+					"file": "editor/frame.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 214,
+						"buffer_size": 2392,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								162,
-								162
+								1660,
+								1660
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage"
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "graphics/components/menu.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5121,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								958,
+								958
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -283,19 +262,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "editor/frame.py",
+					"file": "graphics/components/listbox.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2265,
+						"buffer_size": 3174,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1357,
-								1357
+								1755,
+								1755
 							]
 						],
 						"settings":
@@ -304,26 +283,54 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 585.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "editor/maplist.py",
+					"file": "graphics/components/dialog.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 496,
+						"buffer_size": 2139,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								495,
-								495
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "editor/maplist.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1005,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1002,
+								1002
 							]
 						],
 						"settings":
@@ -337,47 +344,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "graphics/components/listbox.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2534,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1535,
-								1535
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 386.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 6,
-					"file": "core/map/map.py",
+					"file": "core/map/manager.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 325,
+						"buffer_size": 206,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								324,
-								324
+								161,
+								161
 							]
 						],
 						"settings":
@@ -392,24 +372,25 @@
 				},
 				{
 					"buffer": 7,
-					"file": "core/map/manager.py",
+					"file": "core/game.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 195,
+						"buffer_size": 250,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								194,
-								194
+								185,
+								185
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage"
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -419,19 +400,19 @@
 				},
 				{
 					"buffer": 8,
-					"file": "settings.py",
+					"file": "core/map/map.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 200,
+						"buffer_size": 337,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								186,
-								186
+								295,
+								295
 							]
 						],
 						"settings":
@@ -446,19 +427,19 @@
 				},
 				{
 					"buffer": 9,
-					"file": "editor/about.py",
+					"file": "core/map/generator.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1112,
+						"buffer_size": 85,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								326,
-								326
+								84,
+								84
 							]
 						],
 						"settings":
@@ -473,19 +454,19 @@
 				},
 				{
 					"buffer": 10,
-					"file": "graphics/components/dialog.py",
+					"file": "core/player.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2139,
+						"buffer_size": 560,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								421,
-								421
+								559,
+								559
 							]
 						],
 						"settings":
@@ -500,25 +481,24 @@
 				},
 				{
 					"buffer": 11,
-					"file": "graphics/components/statusbar.py",
+					"file": "core/object/object.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 889,
+						"buffer_size": 153,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								534,
-								534
+								152,
+								152
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

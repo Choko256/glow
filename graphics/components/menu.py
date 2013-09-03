@@ -8,20 +8,6 @@ from . import base as b
 MENU_ITEM_WIDTH = 100
 MENU_BAR_HEIGHT = 35
 
-"""class MenuItemSeparator(b.BaseComponent):
-	def __init__(self, name, width=MENU_ITEM_WIDTH):
-		b.BaseComponent.__init__(self, name)
-		self._width = width
-
-	def handle_event(self, event):
-		pass
-
-	def _draw(self, target):
-		sep = sf.RectangleShape(sf.Vector2(self._width, 1))
-		sep.outline_thickness = 1.0
-		sep.outline_color = sf.Color.BLACK
-		target.draw(sep)"""
-
 class MenuItem(b.BaseComponent):
 	def __init__(self, name, label, position=(0,0), toplevel=False, parent_index=0):
 		b.BaseComponent.__init__(self, name)
@@ -45,7 +31,6 @@ class MenuItem(b.BaseComponent):
 
 	def set_position(self, position):
 		self._i_rect.position = position
-		print("New position of %s: %s" % (self._label, str(position),))
 
 	def width(self):
 		return self._i_rect.global_bounds.width

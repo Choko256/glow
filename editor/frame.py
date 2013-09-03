@@ -4,7 +4,7 @@
 
 import sfml as sf
 from graphics.components import menu, statusbar
-from . import about
+from . import about, maplist
 from settings import *
 
 class MainFrame:
@@ -41,7 +41,9 @@ class MainFrame:
 		self.statusbar.add_item(ver)
 
 	def openmap(self):
-		pass
+		mapdlg = maplist.MapListDialog(onclose=self.on_destroy_component)
+		mapdlg.visible = True
+		self.components.append(mapdlg)
 
 	def savemap(self):
 		pass
