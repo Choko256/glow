@@ -20,7 +20,10 @@ class BaseComponent(sf.TransformableDrawable):
 
 	def _run_event(self, name, args=None):
 		if name in self.events:
-			self.events[name](self, args)
+			if args:
+				self.events[name](self, args)
+			else:
+				self.events[name](self)
 
 	def draw(self, target, states):
 		sf.TransformableDrawable.draw(self, target, states)
