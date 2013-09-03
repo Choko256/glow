@@ -13,6 +13,8 @@ class Dialog(b.BaseComponent):
 		self._title.style = sf.Text.BOLD
 		self._title.color = sf.Color.WHITE
 
+		self.z_faced = True
+
 		self._window = sf.RectangleShape(self.size)
 		self._window.fill_color = sf.Color(240, 240, 225, 180)
 
@@ -45,7 +47,7 @@ class Dialog(b.BaseComponent):
 			titlebar.fill_color = sf.Color(51, 204, 255)
 			target.draw(titlebar)
 
-			self._title.position = sf.Vector2(titlebar.global_bounds.left + 15, titlebar.global_bounds.top + 5)
+			self._title.position = sf.Vector2(titlebar.global_bounds.left + 15, titlebar.global_bounds.top + 10)
 			target.draw(self._title)
 
 			self.sp_close.position = sf.Vector2(titlebar.global_bounds.left + titlebar.global_bounds.width - 36, titlebar.global_bounds.top + 4)

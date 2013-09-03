@@ -3,7 +3,9 @@
 # Glow Editor main frame
 
 import sfml as sf
-from graphics.components import menu, statusbar, dialog
+from graphics.components import menu, statusbar
+from . import about
+from settings import *
 
 class MainFrame:
 	def __init__(self):
@@ -20,7 +22,7 @@ class MainFrame:
 				if c.name == name:
 					return c
 
-	def init(self):
+	def init_ui(self):
 		_system = self.menubar.add_item('System')
 		_system.add_children('New Map', onclick=None)
 		_system.add_children('Quit', onclick=self.close)		
@@ -32,7 +34,7 @@ class MainFrame:
 		_help = self.menubar.add_item('Help')
 		_help.add_children('About...', onclick=self.show_about)
 
-		ver = sf.Text("Version 0.1A")
+		ver = sf.Text("Version %s" % (APP_VERSION,))
 		ver.font = self.statusbar.get_default_font()
 		ver.character_size = 10
 		ver.color = sf.Color.WHITE
@@ -52,12 +54,7 @@ class MainFrame:
 			self.components.remove(component)
 
 	def show_about(self):
-		abdlg = dialog.Dialog('about', (400, 400), title="About Glow", onclose=self.on_destroy_component)
-		apptitle = sf.Text("The Glow")
-		apptitle.character_size = 32
-		apptitle.color = sf.Color.BLACK
-		apptitle.font = abdlg.get_default_font()
-		abdlg.add_component(apptitle, sf.Vector2(40, 60))
+		abdlg = about.AboutDialog(title="About %s" % (APP_NAME,), onclose=self.on_destroy_component)
 		abdlg.visible = True
 		self.components.append(abdlg)
 
@@ -65,18 +62,21 @@ class MainFrame:
 		self.window.close()
 
 	def open(self):
-		self.init()
+		self.init_ui()
 		while self.window.is_open:
+			z_faced = [ c for c in self.components if c.z_faced ]
 			for ev in self.window.events:
 				if type(ev) is sf.CloseEvent:
 					self.window.close()
 				else:
 					for c in self.components:
 						try:
-							c.handle_event(ev)
+							if len(z_faced) == 0 or c.z_faced:
+								c.handle_event(ev)
 						except AttributeError:
 							pass
 			self.window.clear()
 			for c in self.components:
-				self.window.draw(c)
+				if len(z_faced) == 0 or c.z_faced:
+					self.window.draw(c)
 			self.window.display()

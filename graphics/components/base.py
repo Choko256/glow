@@ -13,6 +13,7 @@ class BaseComponent(sf.TransformableDrawable):
 			'OnCreate': None,
 			'OnDraw': None,
 		}
+		self.z_faced = False
 		self._default_font = sf.Font.from_file('./graphics/components/arial.ttf')
 
 	def get_default_font(self):
