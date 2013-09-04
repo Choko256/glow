@@ -17,6 +17,8 @@ class MenuItem(b.BaseComponent):
 		self._on_click = None
 		self._opened = False
 		self._hovered = False
+		self.visible = True
+
 		self._itm = sf.Text(self._label)
 		self._itm.color = sf.Color.BLACK
 		self._itm.character_size = 12
@@ -28,6 +30,12 @@ class MenuItem(b.BaseComponent):
 		self._i_rect.outline_thickness = 1.0
 		self._i_rect.outline_color = sf.Color.BLACK
 		self.__parent_index = parent_index
+
+	def get_child_by_name(self, name):
+		try:
+			return [ c for c in self._children if c.component_name == name ][0]
+		except:
+			return None
 
 	def set_position(self, position):
 		self._i_rect.position = position
@@ -59,33 +67,34 @@ class MenuItem(b.BaseComponent):
 		return self._label
 
 	def _draw(self, target):
-		if self._hovered:
-			self._itm.color = sf.Color(50, 50, 250)
-		else:
-			self._itm.color = sf.Color.BLACK
+		if self.visible:
+			if self._hovered:
+				self._itm.color = sf.Color(50, 50, 250)
+			else:
+				self._itm.color = sf.Color.BLACK
 
-		# Not top level item
-		if self._opened or not self._top_level:
-			self._i_rect.fill_color = sf.Color(200, 200, 200)
-		# Opened top level item
-		if self._opened and self._top_level:
-			self._i_rect.fill_color = sf.Color(51, 204, 255)
-		# Closed top level item
-		elif self._top_level and not self._opened:
-			self._i_rect.outline_thickness = 0.0
-			self._i_rect.fill_color = sf.Color(100, 100, 100)
+			# Not top level item
+			if self._opened or not self._top_level:
+				self._i_rect.fill_color = sf.Color(200, 200, 200)
+			# Opened top level item
+			if self._opened and self._top_level:
+				self._i_rect.fill_color = sf.Color(51, 204, 255)
+			# Closed top level item
+			elif self._top_level and not self._opened:
+				self._i_rect.outline_thickness = 0.0
+				self._i_rect.fill_color = sf.Color(100, 100, 100)
 
-		target.draw(self._i_rect)
-		offset = 0 if self._top_level else 1
-		self._itm.position = sf.Vector2(
-			self._i_rect.global_bounds.left + ((self._i_rect.global_bounds.width - self._itm.global_bounds.width) / 2),
-			self._i_rect.global_bounds.top + ((self._i_rect.global_bounds.height - self._itm.global_bounds.height) / 2)
-		)
+			target.draw(self._i_rect)
+			offset = 0 if self._top_level else 1
+			self._itm.position = sf.Vector2(
+				self._i_rect.global_bounds.left + ((self._i_rect.global_bounds.width - self._itm.global_bounds.width) / 2),
+				self._i_rect.global_bounds.top + ((self._i_rect.global_bounds.height - self._itm.global_bounds.height) / 2)
+			)
 
-		target.draw(self._itm)
-		if self._opened:
-			for c in self._children:
-				target.draw(c)
+			target.draw(self._itm)
+			if self._opened:
+				for c in self._children:
+					target.draw(c)
 
 	def collapse_all(self):
 		self._opened = False
@@ -93,19 +102,21 @@ class MenuItem(b.BaseComponent):
 			i.collapse_all()
 
 	def handle_event(self, event):
-		if type(event) is sf.MouseMoveEvent:
-			self._hovered = self._i_rect.global_bounds.contains(event.position)
-		elif type(event) is sf.MouseButtonEvent:
-			if event.released and event.button == sf.Mouse.LEFT:
-				if self._hovered:
-					if len(self._children) > 0:
-						self._opened = not self._opened
-					else:
-						if self._on_click:
-							self._on_click()
-						self._opened = False
-		for c in self._children:
-			c.handle_event(event)
+		if self.visible:
+			if type(event) is sf.MouseMoveEvent:
+				self._hovered = self._i_rect.global_bounds.contains(event.position)
+			elif type(event) is sf.MouseButtonEvent:
+				if event.released and event.button == sf.Mouse.LEFT:
+					if self._hovered:
+						if len(self._children) > 0:
+							self._opened = not self._opened
+						else:
+							if self._on_click:
+								self._on_click()
+							self._opened = False
+			if self._opened:
+				for c in self._children:
+					c.handle_event(event)
 
 class MenuBarPosition:
 	POSITION_TOP = 0xA0
@@ -151,9 +162,9 @@ class MenuBar(b.BaseComponent):
 			target.draw(itm)
 
 	def handle_event(self, event):
-		if type(event) is sf.MouseButtonEvent:
+		""" if type(event) is sf.MouseButtonEvent:
 			if event.released and event.button == sf.Mouse.LEFT:
 				for itm in self._items:
-					itm.collapse_all()
+					itm.collapse_all() """
 		for itm in self._items:
 			itm.handle_event(event)

@@ -14,10 +14,19 @@ class BaseComponent(sf.TransformableDrawable):
 			'OnDraw': None,
 		}
 		self.z_faced = False
-		self._default_font = sf.Font.from_file('./graphics/components/arial.ttf')
+
+	def bind_event(self, event, callback):
+		if event in self.events:
+			self.events[event] = callback
 
 	def get_default_font(self):
-		return self._default_font
+		return sf.Font.from_file('./graphics/components/arial.ttf')
+
+	def get_default_font_color(self):
+		return sf.Color.BLACK
+
+	def get_default_font_size(self):
+		return 10
 
 	def _run_event(self, name, args=None):
 		if name in self.events:

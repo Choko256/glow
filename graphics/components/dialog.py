@@ -57,10 +57,18 @@ class Dialog(b.BaseComponent):
 				c[0].position = sf.Vector2(self._window.global_bounds.left + c[1].x, self._window.global_bounds.top + c[1].y)
 				target.draw(c[0])
 
+	def close(self, origin=None):
+		self.visible = False
+		self._run_event('OnClose')
+
 	def handle_event(self, event):
 		if self.visible:
 			if type(event) is sf.MouseButtonEvent:
 				if event.released and event.button == sf.Mouse.LEFT:
 					if self.sp_close.global_bounds.contains(event.position):
-						self.visible = False
-						self._run_event('OnClose')
+						self.close()
+			for c in self.components:
+				try:
+					c[0].handle_event(event)
+				except AttributeError:
+					pass

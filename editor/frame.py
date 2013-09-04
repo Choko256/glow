@@ -12,6 +12,9 @@ class MainFrame:
 		self.window = sf.RenderWindow(sf.VideoMode(1024, 600), 'Glow Map Editor')
 		self.window.framerate_limit = 60
 		self.window.vertical_synchronization = True
+
+		self.loaded_map = None
+
 		self.menubar = menu.MenuBar('mbar')
 		self.statusbar = statusbar.StatusBar('status_bar')
 		self.components = [ self.menubar, self.statusbar ]
@@ -24,15 +27,17 @@ class MainFrame:
 
 	def init_ui(self):
 		_system = self.menubar.add_item('System')
-		_system.add_children('New Map', onclick=None)
-		_system.add_children('Quit', onclick=self.close)		
+		self.mi_new_map = _system.add_children('New Map', onclick=None)
+		self.mi_quit = _system.add_children('Quit', onclick=self.close)		
 		_map = self.menubar.add_item('Map')
-		_map.add_children('Open map...', onclick=self.openmap)
-		_map.add_children('Save map', onclick=self.savemap)
+		self.mi_open_map = _map.add_children('Open map...', onclick=self.openmap)
+		self.mi_save_map = _map.add_children('Save map', onclick=self.savemap)
+		self.mi_close_map = _map.add_children('Close map', onclick=self.closemap)
+		self.mi_close_map.visible = False
 		_display = self.menubar.add_item('Tools')
-		_display.add_children('Show/Hide tools', onclick=self.show_tools)
+		self.mi_show_tools = _display.add_children('Show/Hide tools', onclick=self.show_tools)
 		_help = self.menubar.add_item('Help')
-		_help.add_children('About...', onclick=self.show_about)
+		self.mi_about = _help.add_children('About...', onclick=self.show_about)
 
 		ver = sf.Text("Version %s" % (APP_VERSION,))
 		ver.font = self.statusbar.get_default_font()
@@ -40,13 +45,25 @@ class MainFrame:
 		ver.color = sf.Color.WHITE
 		self.statusbar.add_item(ver)
 
+		self.lmap = sf.Text("No map loaded.")
+		self.lmap.font = self.statusbar.get_default_font()
+		self.lmap.character_size = self.statusbar.get_default_font_size()
+		self.lmap.color = sf.Color.WHITE
+		self.statusbar.add_item(self.lmap)
+
 	def openmap(self):
 		mapdlg = maplist.MapListDialog(onclose=self.on_destroy_component)
 		mapdlg.visible = True
+		mapdlg.bind_event('OnSelectMap', self.load_map)
 		self.components.append(mapdlg)
 
 	def savemap(self):
 		pass
+
+	def closemap(self):
+		self.loaded_map = None
+		self.lmap.string = "No map loaded."
+		self.mi_close_map.visible = False
 
 	def show_tools(self):
 		pass
@@ -59,6 +76,11 @@ class MainFrame:
 		abdlg = about.AboutDialog(title="About %s" % (APP_NAME,), onclose=self.on_destroy_component)
 		abdlg.visible = True
 		self.components.append(abdlg)
+
+	def load_map(self, origin, args):
+		self.loaded_map = args[0].data
+		self.lmap.string = "Map: %s" % (str(self.loaded_map),)
+		self.mi_close_map.visible = True
 
 	def close(self):
 		self.window.close()

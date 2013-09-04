@@ -18,20 +18,28 @@ class ListBoxItem(b.BaseComponent):
 			'OnSelect': onselect
 		})
 
-		self._i_rect = sf.RectangleShape(sf.Vector2(width, 30 * (index + 1)))
+		self._i_rect = sf.RectangleShape(sf.Vector2(width, 30))
+
+	def get_data(self):
+		return self._object
+	def set_data(self, data):
+		self._object = data
+	def del_data(self):
+		del self._object
+	data = property(get_data, set_data, del_data, "Object related to list item")
 
 	def _draw(self, target):
 		label = sf.Text(str(self._object))
 		label.character_size = 12
 		label.font = self.get_default_font()
 		label.color = sf.Color.BLACK
-		if self.selected:
-			label.style = sf.Text.BOLD
+		self._i_rect.fill_color = sf.Color(230, 230, 230, 210)
 		if self.hovered:
 			self._i_rect.fill_color = sf.Color(240, 240, 240, 220)
-		else:
-			self._i_rect.fill_color = sf.Color(230, 230, 230, 210)
-		self._i_rect.position = sf.Vector2(self._relative_parent_pos.x, self._relative_parent_pos.y * (self._index + 1))
+		if self.selected:
+			label.style = sf.Text.BOLD
+			self._i_rect.fill_color = sf.Color(51, 204, 255)
+		self._i_rect.position = sf.Vector2(self._relative_parent_pos.x, self._relative_parent_pos.y + (self._index * self._i_rect.global_bounds.height))
 		label.position = sf.Vector2(self._i_rect.global_bounds.left + 20, self._i_rect.global_bounds.top + 10)
 		target.draw(self._i_rect)
 		target.draw(label)
@@ -70,12 +78,19 @@ class ListBox(b.BaseComponent):
 		self._objects.append(ListBoxItem('item-%d' % (len(self._objects),), len(self._objects), self.l_rect.global_bounds.width, sf.Vector2(self.l_rect.global_bounds.left, self.l_rect.global_bounds.top)
 			, _object, onselect=self.on_select_item)
 		)
+		print(self._objects)
+		
+	def clear_objects(self):
+		self._objects = []
 
 	def on_select_item(self, item):
 		self.selected = self._objects.index(item)
 		for itm in self._objects:
 			if itm != item:
 				itm.selected = False
+
+	def get_selected(self):
+		return self._objects[self.selected]
 
 	def remove_object(self, _object):
 		if type(_object) is ListBoxItem:
