@@ -162,9 +162,9 @@ class MenuBar(b.BaseComponent):
 			target.draw(itm)
 
 	def handle_event(self, event):
-		""" if type(event) is sf.MouseButtonEvent:
+		if type(event) is sf.MouseButtonEvent:
 			if event.released and event.button == sf.Mouse.LEFT:
 				for itm in self._items:
-					itm.collapse_all() """
+					itm.collapse_all()
 		for itm in self._items:
 			itm.handle_event(event)
